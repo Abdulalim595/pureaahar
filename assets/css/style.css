@@ -134,8 +134,8 @@ main {
 
 /*===================== header CSS AREA start =====================*/
 header.header__area {
-  background-color: var(--lightGreen);
-  position: absolute;
+  background-image: linear-gradient(#00e8ff, #f9f9f9);
+  position: fixed;
   left: 0px;
   right: 0px;
   z-index: 99;
@@ -144,6 +144,7 @@ header.header__area {
 .header__wrap {
   align-items: center;
   justify-content: space-between;
+  padding: 1rem 0rem;
 }
 
 .header__location {
@@ -164,7 +165,7 @@ header.header__area {
   width: 14px;
 }
 
-.logo__location a img {width: 101px;}
+.logo__location a img {width: 124px;margin-right: 10px;}
 
 .header__search {
   background: #fff;
@@ -250,15 +251,11 @@ header.header__area {
   display: none !important;
 }
 
-.get__off {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  overflow-x: scroll;
-}
 .getoffer__slide {
   overflow-x: scroll;
+}
+.getoffer__slide::-webkit-scrollbar {
+  width: 0px;
 }
 .getoff__card {
   display: flex;
@@ -497,13 +494,12 @@ section.brand__service {
 
 /*===================== footer CSS AREA START =====================*/ 
 footer#footer__area {
-  background-color: var(--opGreen);
+  background-image: linear-gradient(#00e8ff, #f9f9f9);
   padding-bottom: 1.5rem !important;
 }
 
 .footer__content img {
   width: 130px;
-  margin-bottom: -30px;
 }
 
 .footer__content p {
@@ -525,8 +521,6 @@ footer#footer__area {
   justify-content: space-between;
 }
 
-.footer__lists .footer__single__list:last-child .footer__social {
-}
 
 .footer__lists .footer__single__list:last-child {
   text-align: center;

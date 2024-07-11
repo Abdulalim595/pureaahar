@@ -50,7 +50,26 @@
   h5 {
     font-size: 18px;
   }
-  
+  .logo__location a img {
+    width: 100px;
+}
+
+.header__search {
+    margin-left: 24px;
+}
+
+.header__location span {
+    font-size: 12px;
+}
+
+.logo__location > a {
+    margin-right: 10px;
+}
+
+.logo__location > a:after {
+    width: 1px;
+    height: 50px;
+}
 }
 
 /* MD Device :768px. */
@@ -101,7 +120,9 @@
   :root {
     --f32 : 24px;
   }
-  
+  .header__wrap {
+    padding: 0.6rem 0px;
+}
 }
 
 @media (min-width: 320px) and (max-width: 575px) {
