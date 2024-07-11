@@ -242,7 +242,7 @@ header.header__area {
   margin: 160px auto 60px;
 }
 
-.hero__slide > .swiper-button-next,.hero__slide > .swiper-button-prev {
+.hero__slide > .swiper-button-next,.hero__slide > .swiper-button-prev,#pureahar__exclusive > .swiper-button-next,#pureahar__exclusive > .swiper-button-prev {
   display: none;
 }
 
@@ -581,5 +581,7 @@ ul.footer__social li a {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #02aa14;
+  font-size: 14px;
 }
 /*===================== footer CSS AREA END =====================*/ 

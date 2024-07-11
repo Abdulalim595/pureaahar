@@ -572,7 +572,7 @@
               </div>
             </div>
             <div class="f__contact">
-              <span><i class="bi bi-facebook"></i></span>
+              <span><i class="bi bi-telephone-fill"></i></span>
               <a href="tel:+918584918100">Call Us at <br><b>+91 8584918100</b></a>
             </div>
             <div class="copyright">
@@ -598,7 +598,7 @@
   <script>
     
     let swiper2 = new Swiper(".hero__slide", {
-      slidesPerView: 3,
+      slidesPerView: 1,
       spaceBetween: 30,
       centeredSlides: false,
       freeMode: true,
@@ -609,10 +609,24 @@
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
-      }
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1.25,
+          spaceBetween: 20
+        },
+        641: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        1201: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        }
+  }
     });
     let swiper3 = new Swiper(".popular__cuisine", {
-      slidesPerView: 6,
+      slidesPerView: 3,
       spaceBetween: 30,
       centeredSlides: false,
       freeMode: true,
@@ -626,15 +640,28 @@
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+      breakpoints: {
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        },
+        641: {
+          slidesPerView: 4,
+          spaceBetween: 20
+        },
+        1201: {
+          slidesPerView: 6,
+          spaceBetween: 20
+        }
+      }
     });
     let swiper1 = new Swiper("#brand__service", {
-      slidesPerView: 4,
+      slidesPerView: 2,
       spaceBetween: 30,
       centeredSlides: false,
       freeMode: true,
       autoplay: false,
       pagination: {
-
         el: ".swiper-pagination",
         clickable: true,
       },
@@ -642,9 +669,23 @@
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        641: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        },
+        1201: {
+          slidesPerView: 4,
+          spaceBetween: 20
+        }
+      }
     });
     let swiper4 = new Swiper("#pureahar__exclusive", {
-      slidesPerView: 4,
+      slidesPerView: 1,
       spaceBetween: 16,
       centeredSlides: false,
       freeMode: true,
@@ -658,6 +699,20 @@
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        641: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        },
+        1201: {
+          slidesPerView: 4,
+          spaceBetween: 20
+        }
+      }
     });
   </script>
 

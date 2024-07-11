@@ -50,48 +50,7 @@
   h5 {
     font-size: 18px;
   }
-  .search__login {
-    gap: 10px;
-}
-
-.header__wrap > ul li a {
-    padding: 0px 8px 6px;
-}
-
-a.login {
-    width: 90px;
-}
-
-div#seachField {
-    padding: 10px 10px;
-}
-
-div#seachField, a.login {
-    height: 40px;
-}
-
-.logo {
-    width: 110px;
-}
-
-.booking__cards {
-  gap: 10px;
-}
-
-.booking__card__img {
-  height: 54px;
-}
-.arrows-downs, .arrows-downs2 {
-  font-size: 17px;
-}
-.footer__cards {
-    gap: 50px;
-}
-
-.footer__bottom,.footer__top {
-    padding-left: 50px;
-    padding-right: 50px;
-}
+  
 }
 
 /* MD Device :768px. */
@@ -108,74 +67,7 @@ div#seachField, a.login {
     --f32 : 26px;
     --f24 : 20px
   }
-  
-  .company__contact {
-    display: none;
-}
-
-
-.team__title.title {
-  margin-bottom: 35px;
-}
-
-.team__card {
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  gap: 18px;
-}
-.team__card__img {
-  width: 100%;
-}
-.team__card__content ul {
-  row-gap: 8px;
-  column-gap: 22px;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-.team__card__content ul li a {
-  font-size: 18px;
-}
-
-.team__wrap {
-  gap: 50px;
-}
-
-.team__card2 {
-  grid-template-columns: repeat(1,1fr);
-}
-
-.team__wrap .team__card:last-child {display: flex !important;flex-direction: column-reverse;}
-.booking__cards {
-  grid-template-columns: repeat(4,1fr);
-}
-.booking__card__img {
-  height: 155px;
-  border-radius: 19px;
-}
-.booking__card__img:after {
-  border-radius: 20px;
-}
-.booking__card__img img {
-  inset: 2px;
-  width: 98%;
-  height: 98%;
-}
-.team__card__content {
-  max-width: 100%;
-}
-
-.team__card__content ul li a {
-  padding: 15px;
-}
-
-
-  .footer__top {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-}
+ 
 }
 
 /* SM Small Device :320px. */
@@ -185,95 +77,11 @@ div#seachField, a.login {
   :root {
     --f32 : 24px;
   }
-  .about__details {
-  padding: 320px 0px !important;
-  margin: -250px 0px -240px !important;
-}
-  .welcome h6 {
-    font-size: 14px;
-}
-  .hero__area {
-    padding: 45px 0px 50px;
-}
-
-.booking__card__img {
-  height: 110px;
-  border-radius: 13px;
-}
-
-.booking__card__img img {
-  inset: 1px;
-  width: 98%;
-  height: 98%;
-}
-
-  .footer__cards {
-    flex-direction: column;
-    gap: 30px;
-}
-
-.footer__card > ul {
-    gap: 8px;
-}
-
-.footer__card h5 {
-    margin-bottom: 8px;
-}
-
-.footer__bottom, .footer__top {
-    padding: 10px 15px 20px;
-}
-
-section.contact__details {
-    padding: 140px 0px;
-    margin: -180px 0px -75px;
-}
-a.body__arrow.btns.btn__gradient {
-  width: 35px;
-  height: 35px;
-  font-size: 20px;
-}
-
-.customer__card__field {
-  padding: 10px;
-}
-.booking_wrap {
-  gap: 15px;
-}
+  
 }
 
 @media (min-width: 320px) and (max-width: 575px) {
-  .offcanvas-area {
-    width: 100%;
-  }
-  .checkout__input {
-    grid-template-columns: repeat(1,1fr);
-    gap: 12px;
-}
-  .modal__service__details .sell__cart {
-    flex-direction: column;
-    gap: 10px;
-}
-
-  .service__repair {
-    flex-direction: column;
-}
-.booking__cards {
-  grid-template-columns: repeat(3,1fr);
-}
-
-.service__repair2, .service__repair3 {
-  height: 125px;
-}
-
-.arrows-downs, .arrows-downs2 {
-  transform: translateY(-108px);
-  justify-content: start;
-}
-
-.arrowDownActive {
-  transform: scale(0) translateY(0px) !important;
-}
+  
 }
 
 /* SM Small Device :576px. */
