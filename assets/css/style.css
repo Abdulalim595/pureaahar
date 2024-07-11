@@ -467,6 +467,7 @@ section.brand__service {
   text-align: center;
   font-size: 26px;
   font-weight: 600;
+  gap: 10px;
 }
 
 .benefit__title h3 > p {
