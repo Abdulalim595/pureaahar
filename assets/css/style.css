@@ -555,6 +555,162 @@ section.satvik__box {
 
 .rate-star svg {width: 16px;margin-right: 4px;}
 
+.people__count {
+  border: 1px solid #e5e7eb;
+  max-width: 145px;
+  height: 40px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  place-items: center;
+  font-size: .875rem;
+  margin-top: 16px;
+}
+
+
+
+.meal__single__left__item2 {
+  background: #fafafa;
+  border-color: #fafafa;
+}
+.meal__card__calender p {
+  display: flex;
+  align-items: center;
+}
+
+.meal__card__calender p img {
+  width: auto;
+  margin-right: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.calender-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 25px 30px 10px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: #ff898d;
+  border-radius: 10px 10px 0 0;
+}
+.calender-area .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.calender-area .icons span {
+  margin: 0 10px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  font-size: 1.1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 50%;
+}
+.icons span:last-child {
+  margin-right: -10px;
+}
+.calender-area .icons span:hover {
+  background: #f2f2f2;
+}
+.calender-area .current-date {
+  font-size: 18px;
+  font-weight: 500;
+}
+.calendar {
+  padding: 20px;
+  background-color: #fff;
+}
+.calender-area {
+  background: #fff;
+  margin-top: 1rem;
+  padding-bottom: 0px;
+}
+.calendar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+.calendar .days {
+  margin-bottom: 20px;
+}
+.calendar li {
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+.calendar .weeks li {
+  cursor: default;
+  font-size: 0.75rem;
+}
+.calendar .days li {
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+  font-size: 0.75rem;
+}
+.days li.inactive {
+  color: #aaa;
+}
+.days li.active {
+  color: #fff;
+}
+.days li::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.days li.active::before {
+  background: rgb(25, 118, 210);
+}
+.days li:not(.active):hover::before {
+  background: #f2f2f2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .meal__item__title {
@@ -594,6 +750,7 @@ section.satvik__box {
   display: flex;
   align-items: center;
   gap: 25px;
+  margin-bottom: 12px;
 }
 
 .meal__time__check__single {
@@ -609,12 +766,6 @@ section.satvik__box {
 .meal__item__title h6 span {
   color: var(--bgOrange);
 }
-.meal-check {
-  padding: 9px;
-  flex-shrink: 0;
-}
-
-
 
 .subscriptions__titles {
   display: flex;
@@ -744,6 +895,88 @@ section.satvik__box {
 
 .mf-btn:hover {
   background-color: rgba(25, 118, 210, 0.04);
+}
+
+
+
+
+
+
+.meal-check.meal-check2 {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  border: 1px solid;
+  padding: 0px !important;
+  border-radius: 3px;
+  margin-right: 9px;
+}
+
+.meal-check2 * {
+  inset: 0 !important;
+}
+
+.meal-check2 input {
+  opacity: 0 !important;
+  position: absolute;
+  inset: 0px;
+  z-index: 2;
+
+}
+.meal-check3 {
+  margin-right: 9px;
+}
+.meal-check2 svg {
+  opacity: 0;
+  transform: scale(1.5) !important;
+  position: absolute !important;
+  inset: 0px !important;
+  fill: #1976D2;
+  border-radius: 3px;
+}
+
+.meal-check2 input:checked ~ svg {
+  opacity: 1 !important;
+}
+
+
+
+
+
+
+.meal-check1 {
+  padding: 9px;
+  flex-shrink: 0;
+}
+
+.meal-check1 {
+  padding-right: 25px;
+}
+.mealCheck {
+  display: none;
+}
+.checkActive {
+  border: 1px solid var(--bgOrange) !important;
+  background-color: #fef5d8 !important;
+}
+.checkActive .meal-check svg{
+  z-index: 2;
+  opacity: 1;
+}
+.meal-check1 input, .meal-check1 svg {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+}
+
+.meal-check1 svg {
+  transform: scale(1.4);
+  opacity: 0;
+  fill: #1976D2;
+}
+
+.meal-check1 input {
+  transform: scale(1.1);
 }
 /*===================== Meals CSS AREA END =====================*/
 
