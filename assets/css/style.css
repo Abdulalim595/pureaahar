@@ -226,7 +226,9 @@ header.header__area {
   font-size: 14px;
   color: var(--textBlack);
 }
-
+.nav__login ul li a.active {
+  color: var(--textHover);
+}
 .nav__login ul li a:hover {
   color: var(--textHover);
 }
