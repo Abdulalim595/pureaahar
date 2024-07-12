@@ -564,6 +564,7 @@ section.satvik__box {
   place-items: center;
   font-size: .875rem;
   margin-top: 16px;
+  cursor: pointer;
 }
 
 
