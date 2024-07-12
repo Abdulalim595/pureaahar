@@ -242,7 +242,7 @@ header.header__area {
 
 .hero__slide {
   max-width: 1536px;
-  margin: 160px auto 60px;
+  margin: 100px auto 60px;
 }
 
 .hero__slide > .swiper-button-next,.hero__slide > .swiper-button-prev,#pureahar__exclusive > .swiper-button-next,#pureahar__exclusive > .swiper-button-prev {
