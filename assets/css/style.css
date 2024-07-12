@@ -371,7 +371,7 @@ section.brand__service {
   height: 104%;
 }
 .swiper-slide2 {
-  opacity: .5;
+  /* opacity: .5; */
 }
 .brand__service__card__content {
   display: flex;
