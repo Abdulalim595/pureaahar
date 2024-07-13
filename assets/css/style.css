@@ -505,7 +505,7 @@ section.brand__service {
 
 /*===================== Meals CSS AREA END =====================*/
 section.satvik__box {
-  margin-top: 190px;
+  margin-top: 100px;
   margin-bottom: 60px;
 }
 
@@ -1068,3 +1068,107 @@ ul.footer__social li a {
   font-size: 14px;
 }
 /*===================== footer CSS AREA END =====================*/ 
+
+
+/* calender  */
+.calendar-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  /* padding: 10px; */
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.calendar {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.day {
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.day.selected, .day.clicked {
+  background-color: #ff6b6b;
+  color: white;
+  border-radius: 10px;
+}
+
+.slider {
+  display: none;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 48%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.slider-item i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('icons.png') no-repeat;
+  margin-right: 5px;
+}
+
+.home-icon {
+  background-position: 0 0;
+}
+
+.work-icon {
+  background-position: -20px 0;
+}
+
+@media (max-width: 600px) {
+  .calendar-container {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 10px;
+  }
+
+  button {
+      margin: 10px 0;
+      padding: 10px 20px;
+  }
+
+  .slider {
+      flex-direction: column;
+  }
+
+  .slider-item {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+}

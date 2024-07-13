@@ -35,10 +35,10 @@
                     <span>CP-13, CP Block, Sector V, Bidhan...</span>
                     <img src="assets/img/arrow-down.svg" alt="">
                 </div>
-                <div class="header__search d-none d-lg-flex">
+                <!-- <div class="header__search d-none d-lg-flex">
                     <span><i class="fa-solid fa-magnifying-glass"></i></span>
                     <span>What do you want to eat?</span>
-                </div>
+                </div> -->
             </div>
             <div class="nav__login d-flex">
                 <ul class="d-md-flex d-none">
@@ -80,7 +80,11 @@
               </div>
             </div>
           </div>
-
+          <div class="calendar-container">
+            <button id="prevWeek">&lt;</button>
+            <div class="calendar" id="calendar"></div>
+            <button id="nextWeek">&gt;</button>
+        </div>
           <div class="row g-4">
             <div class="col-sm-6">
               <div class="meal__left__items">
@@ -108,7 +112,7 @@
                   <span>Lunch Timing: 12.30 PM - 2 PM</span>
                   <span>Dinner Timing: 8.30 PM - 10 PM</span>
                 </div>
-                <div class="meal__single__left__item">
+                <!-- <div class="meal__single__left__item">
                   <div class="meal__item__title">
                     <img src="assets/img/cut-BmhnrweH.png" alt="">
                     <h6>Select Portion Size <span>*</span></h6>
@@ -127,7 +131,7 @@
                       <label>Jumbo <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info "><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg></label>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <div class="meal__single__left__item">
                   <div class="meal__item__title">
                     <img src="assets/img/cut-BmhnrweH.png" alt="">
@@ -188,7 +192,7 @@
                   <div class="subscription__meal__cards">
                     <div class="subscription__single__card">
                       <div class="subscription__card__content">
-                        <h5>Single Day Meal</h5>
+                        <h5>Taste Meal</h5>
                         <p><img src="assets/img/download.webp" alt="">Meals for 1 day</p>
                       </div>
                       <div class="meal-check meal-check1" onclick="mealCheck(x)">
@@ -322,6 +326,77 @@
   <script src="assets/js/aos.js"></script>
   <script src="assets/js/jquery.nice-select.min.js"></script>
   <script src="assets/js/app.js"></script>
+  <script>
+    const calendar = document.getElementById('calendar');
+const prevWeekBtn = document.getElementById('prevWeek');
+const nextWeekBtn = document.getElementById('nextWeek');
+const slider = document.getElementById('slider');
+const sliderTitle = document.getElementById('slider-title');
+const sliderDate = document.getElementById('slider-date');
+const sliderDescription = document.getElementById('slider-description');
+
+const daysOfWeek = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+
+let currentDate = new Date();
+let startDate = new Date(currentDate);
+
+function generateCalendar(startDate) {
+    const daysHTML = [];
+    for (let i = 0; i < 7; i++) {
+        const date = new Date(startDate);
+        date.setDate(startDate.getDate() + i);
+        const dayName = daysOfWeek[date.getDay()];
+        const dayNumber = date.getDate();
+        const monthName = months[date.getMonth()];
+        const isSelected = (date.toDateString() === new Date().toDateString()) ? 'selected' : '';
+        daysHTML.push(`<div class="day ${isSelected}" data-date="${date}">${dayName} <br> ${dayNumber} <br> ${monthName}</div>`);
+    }
+    calendar.innerHTML = daysHTML.join('');
+    updateButtonState();
+    addDayClickEvent();
+}
+
+function updateButtonState() {
+    prevWeekBtn.disabled = startDate <= new Date();
+}
+
+function addDayClickEvent() {
+    const dayElements = calendar.getElementsByClassName('day');
+    for (let dayElement of dayElements) {
+        dayElement.addEventListener('click', function() {
+            clearSelectedState();
+            dayElement.classList.add('clicked');
+            slider.style.display = 'flex';
+            const selectedDate = new Date(dayElement.dataset.date);
+            sliderTitle.innerText = "Selected Date";
+            sliderDate.innerText = `${daysOfWeek[selectedDate.getDay()]} ${selectedDate.getDate()} ${months[selectedDate.getMonth()]}`;
+            sliderDescription.innerText = "You have selected this date.";
+        });
+    }
+}
+
+function clearSelectedState() {
+    const dayElements = calendar.getElementsByClassName('day');
+    for (let dayElement of dayElements) {
+        dayElement.classList.remove('clicked');
+        dayElement.classList.remove('selected');
+    }
+}
+
+prevWeekBtn.addEventListener('click', () => {
+    startDate.setDate(startDate.getDate() - 7);
+    generateCalendar(startDate);
+});
+
+nextWeekBtn.addEventListener('click', () => {
+    startDate.setDate(startDate.getDate() + 7);
+    generateCalendar(startDate);
+});
+
+generateCalendar(startDate);
+
+</script>
   <script>
     const daysTag = document.querySelector(".days");
 const currentDate = document.querySelector(".current-date");
