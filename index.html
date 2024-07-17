@@ -25,7 +25,7 @@
 <body>
 
   <!-- ===================== HEADER AREA START ===================== -->
-   <header class="header__area">
+  <header class="header__area">
     <div class="container">
         <div class="header__wrap d-flex">
             <div class="logo__location d-flex">
@@ -42,11 +42,77 @@
             </div>
             <div class="nav__login d-flex">
                 <ul class="d-md-flex d-none">
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="meals-page.html">Meals</a></li>
-                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="profile.html" class="active">Profile</a></li>
                 </ul>
-                <a href="#"><i class="fa-regular fa-user"></i>LOGIN/SIGNUP</a>
+
+                <a class="" data-bs-toggle="modal" href="#exampleModalToggle1" role="button"><i class="fa-regular fa-user"></i>LOGIN/SIGNUP</a>
+                
+                <div class="modal fade" id="exampleModalToggle1" aria-hidden="true" aria-labelledby="exampleModalToggleLabel1" tabindex="-1">
+                  <div class="modal-dialog modal-dialog-centered modal__login">
+                    <div class="modal-content modal-content1">
+                      <div class="modal-header modal-header1">
+                        <h5 class="modal-title welcomeh5" id="exampleModalToggleLabel1"> Welcome to PureAahar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="login__number">
+                          <h4>Verify your phone number with code</h4>
+                          <span style="font-size: 12px;">We’ll send you a code. It helps keep your account
+                            secure</span>
+                          <div class="flag__nmbr">
+                            <span style="font-size: 12px;">Your Phone Number</span>
+                            <div class="phone__number">
+                              <div class="flag">
+                                <img src="assets/img/india-Dywmhe4R.png" alt="">
+                                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-18rhxbz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowDropDownIcon"><path d="m7 10 5 5 5-5z"></path></svg>
+                              </div>
+                              <div class="number__input">
+                                <span><b>+91</b></span>
+                                <input type="text">
+                              </div>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle22" data-bs-toggle="modal" data-bs-dismiss="modal">COUNTINUE</button> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal fade" id="exampleModalToggle22" aria-hidden="true" aria-labelledby="exampleModalToggleLabel22" tabindex="-1">
+                  <div class="modal-dialog modal-dialog-centered modal__login">
+                    <div class="modal-content modal-content1">
+                      <div class="modal-header modal-header1">
+                        <h5 class="modal-title welcomeh5" id="exampleModalToggleLabel22">Welcome to PureAahar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="login__number">
+                          <div class="verification__title">
+                            <h5>Mobile Verification</h5>
+                            <span>Enter the 6 digit code sent to +91 1234567890</span>
+                          </div>
+                          <div class="verification__input">
+                            <input type="text" placeholder="-">
+                            <input type="text" placeholder="-">
+                            <input type="text" placeholder="-">
+                            <input type="text" placeholder="-">
+                            <input type="text" placeholder="-">
+                            <input type="text" placeholder="-">
+                          </div>
+                          <div class="resend">
+                            <p>Didn't receive code? <a href="#">Resend</a></p>
+                            <span>or</span>
+                            <a href="#">Login with Password</a>
+                          </div>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle1" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
             </div>
         </div>
     </div>
