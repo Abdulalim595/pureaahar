@@ -956,11 +956,22 @@ section.satvik__box {
 .mealCheck {
   display: none;
 }
-.checkActive {
+.subscription__single__card.checkActive {
   border: 1px solid var(--bgOrange) !important;
   background-color: #fef5d8 !important;
 }
+.address__card__place.checkActive {
+  border: 2px solid #02aa14;
+}
 .checkActive .meal-check svg{
+  z-index: 2;
+  opacity: 1;
+}
+.right__address .title__address svg {
+  opacity: 0;
+  color: #02aa14;
+}
+.checkActive .right__address .title__address svg{
   z-index: 2;
   opacity: 1;
 }
@@ -978,6 +989,194 @@ section.satvik__box {
 
 .meal-check1 input {
   transform: scale(1.1);
+}
+
+
+
+.meal__checkout {
+  padding: 10rem 0px 4rem;
+}
+.checkout__left__card__title img {
+  width: 1.5rem;
+}
+.checkout__left__card__title {gap: 8px;margin-bottom: 20px;}
+
+.hero__single__form select {
+    font-size: .875rem;
+    border: 1px solid #d1d5db;
+    padding: .5rem .25rem;
+    margin-top: .375rem;
+    color: #374151;
+}
+
+.hero__single__form label {
+    font-weight: 500;
+}
+
+.checkout__left__card,.checkout__right__card {
+    border-radius: .375rem;
+    padding: 1rem;
+    border: 2px solid #e5e7eb;
+}
+
+.checkout__left__card__title h5 span {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.delivery__address {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1rem;
+}
+
+.address__card {
+  width: 100%;
+}
+
+.address__card__place {
+  padding: .75rem 1rem;
+  border: 2px solid #e5e7eb;
+  display: flex;
+  align-items: start;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.add__address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 8px;
+  border: 2px dashed #e5e7eb;
+  cursor: pointer;
+}
+
+.title__address {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.right__address p {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.add__address svg {
+  color: var(--bgOrange) !important;
+}
+.checkout__left__card2 {
+  margin: 2rem 0rem;
+
+}
+
+.checkout__left__card__text {
+  width: 50%;
+}
+
+.hero__single__form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+}
+
+.hero__single__form textarea {
+  outline: none;
+  border: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+.hero__single__form button {
+  background: transparent;
+  display: inline-block;
+  width: auto;
+}
+
+.title__subscription {
+  text-align: center;
+  color: var(--textGray);
+  margin-bottom: 24px;
+}
+
+.weekly__card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .75rem;
+  background: #f8f8f8;
+}
+
+.weekly__card button {
+  background: transparent;
+}
+
+.total__people img {width: 1rem;margin-right: 5px;}
+
+.total__people__content {
+  display: flex;
+  align-items: center;
+}
+
+.total__people__content p span {
+  font-size: 14px;
+}
+
+.total__people__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0px 8px;
+}
+
+.total__people__top .people__count {
+  width: 84px;
+}
+
+.meal__selection {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 12px;
+}
+
+.total__people > p {
+  margin-bottom: 40px;
+}
+.bill__detail {
+  padding-top: 12px;
+  border-top: 2px solid #e5e7eb;
+}
+
+.bill__detail table tbody tr td {
+  font-size: 14px;
+  padding: 8px 0px;
+}
+
+.bill__detail table tbody tr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bill__detail table {
+  width: 100%;
+}
+
+.bill__detail button {
+  background: #02aa14e0;
+  width: 100%;
+  border-radius: .375rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .75rem;
+  margin-top: 8px;
 }
 /*===================== Meals CSS AREA END =====================*/
 

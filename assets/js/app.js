@@ -20,6 +20,28 @@ checkCard.forEach(x => {
   })
 });
 
+let addressCard = document.querySelectorAll('.address__card__place');
+let checkCircle = document.querySelector('.lucide-check-circle');
+// let checkCard = document.querySelectorAll('.meal-check');
+addressCard.forEach(x => {
+  x.addEventListener('click',() => {
+    if(x.classList.add('checkActive') && checkCircle.classList.add('checkCircle')){
+      x.classList.remove('checkActive')
+      checkCircle.classList.remove('checkCircle')
+    }else {
+      x.classList.add('checkActive')
+      checkCircle.classList.add('checkCircle')
+    }
+
+    addressCard.forEach((e) => {
+      if (e !== x) {
+        e.classList.remove("checkActive");
+        checkCircle.classList.remove('checkCircle')
+      }
+    });
+  })
+});
+
 let plus = document.querySelector('.plus');
 let count = document.querySelector('.count');
 let minus = document.querySelector('.minus');
