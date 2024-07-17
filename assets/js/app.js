@@ -61,6 +61,22 @@ minus.addEventListener('click',() => {
 })
 
 
+let saveAddresses = document.querySelectorAll('.save__addresses')
+saveAddresses.forEach((x) => {
+  x.addEventListener('click', () => {
+    if(x.classList.add('saveBtn')){
+      x.classList.remove('saveBtn')
+    }else {
+      x.classList.add('saveBtn')
+    }
+
+    saveAddresses.forEach((e) => {
+      if (e !== x) {
+        e.classList.remove("saveBtn");
+      }
+    });
+  })
+})
 
 
 $(document).ready(function () {

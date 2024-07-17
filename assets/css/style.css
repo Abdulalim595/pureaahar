@@ -370,9 +370,7 @@ section.brand__service {
 .brand__service__card__img img {
   height: 104%;
 }
-.swiper-slide2 {
-  /* opacity: .5; */
-}
+
 .brand__service__card__content {
   display: flex;
   flex-direction: column;
@@ -967,6 +965,9 @@ section.satvik__box {
   z-index: 2;
   opacity: 1;
 }
+.left__address img {
+  width: 24px;
+}
 .right__address .title__address svg {
   opacity: 0;
   color: #02aa14;
@@ -1042,17 +1043,31 @@ section.satvik__box {
   gap: 8px;
   cursor: pointer;
 }
-
+.address__card__place2 {
+  padding: .75rem 1rem;
+  border: 2px solid #e5e7eb;
+  display: flex;
+  align-items: start;
+  gap: 8px;
+  cursor: default !important;
+}
 .add__address {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 1.5rem;
-  gap: 8px;
   border: 2px dashed #e5e7eb;
-  cursor: pointer;
 }
-
+.add__address a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #000;
+}
 .title__address {
   display: flex;
   align-items: center;
@@ -1177,6 +1192,342 @@ section.satvik__box {
   justify-content: space-between;
   padding: .75rem;
   margin-top: 8px;
+}
+
+
+
+#v-pills-tab button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: transparent;
+  font-weight: 500;
+  color: #ada4a5;
+  padding: 8px 16px;
+}
+
+#v-pills-tab button img {
+  width: 1.5rem;
+}
+
+div#v-pills-tab {
+  gap: 24px;
+  padding-right: 4px;
+  border-right: 1px solid #e5e7eb;
+}
+.tab__btn .nav-link.active, .nav-pills .show>.nav-link {
+  background: #0000000a !important;
+  color: #02aa14 !important;
+}
+.tab__btn .nav-link:hover, .nav-pills .show>.nav-link {
+  background: #E9EFFD !important;
+}
+.tab__span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+}
+
+div#v-pills-tabContent {
+  width: 100%;
+}
+
+div#v-pills-tab {
+  flex-shrink: 0;
+}
+
+.sub__tab__btn > li button {
+  padding: 12px 16px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #000;
+  border-radius: 0px !important;
+}
+.sub__tab__btn .nav-link.active, .nav-pills .show>.nav-link {
+  color: #1976d2 !important;
+  background-color: transparent;
+  border-bottom: 2px solid #1976d2;
+}
+
+.refer h5 {
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 19px;
+}
+
+.refer__content h6 {
+  font-size: 0.875rem;
+  line-height: 2.6;
+}
+
+.refer__content span {
+  font-size: 13px;
+  font-weight: 500;
+  color: gray;
+}
+
+.refer__rule {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+
+.get__coin {
+  padding-top: 50px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.refer__single__rule {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.refer__single__rule p {
+  color: #00000099;
+}
+
+.refer__single__rule {
+  display: flex;
+  align-items: center;
+}
+.refer__single__rule .circle {
+  padding: 8px;
+  background-color: #fff;
+}
+.refer__single__rule span {
+  background: #979797;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.refer__rule::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 17px;
+  background: gray;
+  width: 1px;
+  height: 100%;
+  z-index: -1;
+}
+
+.get__single__coin {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+}
+
+.get__single__coin img {width: 1.5rem;}
+
+.get__single__coin p {
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+  font-family: Poppins;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.refer__content > span.link {
+  font-size: .75rem;
+  padding: .625rem;
+  border-radius: .25rem;
+  display: block;
+  border: 1px solid #e5e7eb;
+}
+
+.refer__btn {
+  padding: 15px 0px;
+  gap: 8px;
+}
+
+.refer__btn button {
+  padding: 5px 15px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  gap: 8px;
+}
+
+.refer__btn button:first-child {
+  border: 1px solid rgba(46, 125, 50, 0.5);
+  color: #2e7d32;
+  background: transparent;
+}
+
+.refer__btn button svg {
+  width: 1em;
+  font-size: 24px;
+}
+
+.refer__btn button:first-child svg {
+  fill: #2e7d32;
+}
+
+.refer__btn button:last-child {
+  color: #fff;
+  background: #6abd46;
+}
+
+.refer__btn button:last-child svg {
+  fill: #fff;
+}
+
+.delivery__address2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.delivery__address.delivery__address2 .address__card__place2 .btn__address {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 14px;
+}
+
+.delivery__address.delivery__address2 .address__card__place2 .btn__address button {
+  background: transparent;
+  font-weight: 500;
+}
+
+.delivery__address2 .address__card__place2 .right__address p {
+  color: #000;
+}
+
+
+
+
+.modal-dialog.modal-dialog-centered {
+  max-height: calc(100% - 64px);
+  max-width: 600px;
+  width: calc(100% - 64px);
+  position: relative;
+}
+
+.modal-header {
+  border: none;
+}
+
+.select__location h5 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.location__type {
+  padding: .375rem .75rem;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 4px;
+}
+
+.select__location span {
+  color: #fff;
+  font-size: .75rem;
+  font-weight: 300;
+  background: #000;
+  display: block;
+  text-align: center;
+  padding: .125rem;
+  border-radius: 0px;
+  margin-bottom: 1rem;
+}
+
+.modal-content > button {
+  background: #000;
+  color: #fff;
+  padding: .625rem;
+  width: 94%;
+  margin: 0 auto;
+}
+
+.modal-body {
+  padding: 0px;
+}
+
+.modal-content {
+  padding: .6rem;
+}
+
+
+.save__address__btn button img {width: 15px;}
+
+.modal-header h5 img {
+    width: 24px;
+}
+
+.save__address__btn button {
+    background-color: transparent;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 16px;
+    height: 32px;
+    padding: 0px .5rem;
+    gap: 6px;
+    font-size: 0.8125rem;
+}
+
+.save__address__btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: .75rem 0px;
+}
+
+.reciever__address p {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #bdbdbd80;
+  padding-bottom: 10px;
+  font-weight: 500;
+}
+
+.input__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: .75rem;
+    margin-bottom: 1rem;
+}
+
+.input__field input {border: 1px solid #e5e7eb;padding: .75rem;}
+.saveBtn {
+  background-color: rgb(232, 247, 247) !important;
+    border: 1px solid rgb(29, 170, 170) !important;
+    color: rgb(29, 170, 170);
+}
+.mark {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: .75rem;
+    border-bottom: 1px solid #bdbdbd80;
+    padding-bottom: 20px;
+}
+.modal-content2 {
+  padding: 1.5rem;
+}
+.form__btn {
+  width: 100% !important;
+  border-radius: 6px;
+}
+.mark input {
+    width: 20px;
+    height: 20px;
 }
 /*===================== Meals CSS AREA END =====================*/
 

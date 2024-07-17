@@ -44,7 +44,7 @@
                 <ul class="d-md-flex d-none">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#" class="active">Meals</a></li>
-                    <li><a href="#">Profile</a></li>
+                    <li><a href="profile.html">Profile</a></li>
                 </ul>
                 <a href="#"><i class="fa-regular fa-user"></i>LOGIN/SIGNUP</a>
             </div>
@@ -83,10 +83,99 @@
                   <img src="assets/img/location-BBKCEJe0.png" alt="">
                   <h5>Select Delivery Address <span>(you can also update this later)</span></h5>
                 </div>
+
+
                 <div class="delivery__address">
                   <div class="address__card add__address">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-fading-plus text-3xl text-primary"><path d="M12 2a10 10 0 0 1 7.38 16.75"></path><path d="M12 8v8"></path><path d="M16 12H8"></path><path d="M2.5 8.875a10 10 0 0 0-.5 3"></path><path d="M2.83 16a10 10 0 0 0 2.43 3.4"></path><path d="M4.636 5.235a10 10 0 0 1 .891-.857"></path><path d="M8.644 21.42a10 10 0 0 0 7.631-.38"></path></svg>
-                    <h6>Add Address</h6>
+                    <a class="" data-bs-toggle="modal" href="#exampleModalToggle" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-fading-plus text-3xl text-primary"><path d="M12 2a10 10 0 0 1 7.38 16.75"></path><path d="M12 8v8"></path><path d="M16 12H8"></path><path d="M2.5 8.875a10 10 0 0 0-.5 3"></path><path d="M2.83 16a10 10 0 0 0 2.43 3.4"></path><path d="M4.636 5.235a10 10 0 0 1 .891-.857"></path><path d="M8.644 21.42a10 10 0 0 0 7.631-.38"></path></svg>
+                      <h6>Add Address</h6></a>
+
+
+
+
+
+
+                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="select__location">
+                              <h5>SELECT LOCATION</h5>
+                              <div class="location__type">
+                                <input type="text" placeholder="HCWP+VR Rajarhat, Kolkata, West Bengal, India">
+                              </div>
+                              <img src="assets/img/Screenshot_150.png" alt="">
+                              <span>Please provide accurate location for hassle-free delivery experience.</span>
+                            </div>
+                          </div>
+                          <button class="btns" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Continue</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content modal-content2">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel2"><img src="assets/img/location-BBKCEJe0.png" alt=""> Locality</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="reciever__address">
+                              <p><small>HCWP+VR Rajarhat, Kolkata, West Bengal, India</small></p>
+                              <form action="/action_page.php">
+                                <div class="input__field">
+                                  <label for="">RECEIVER'S CONTACT NUMBER.</label>
+                                  <input type="text" placeholder="Eg: 9876543210">
+                                </div>
+                                <div class="input__field">
+                                  <label for="">FLAT / HOUSE NUMBER, NAME OF BUILDING ETC.</label>
+                                  <input type="text" placeholder="Eg: 9876543210">
+                                </div>
+                                <div class="input__field">
+                                  <label for="">FLOOR / BLOCK (OPTIONAL)</label>
+                                  <input type="text" placeholder="Eg: 9876543210">
+                                </div>
+                                <div class="input__field">
+                                  <label for="">LANDMARK / DIRECTION TO REACH (OPTIONAL)</label>
+                                  <input type="text" placeholder="Eg: 9876543210">
+                                </div>
+                                <div class="mark">
+                                  <input type="checkbox">
+                                  <label for="">Make this my default address</label>
+                                </div>
+                                
+                              </form>
+                              <div class="save__address__btn">
+                                <button class="btns save__addresses"><img src="assets/img/home-DQtWHZh5.png" alt=""> Home</button>
+                                <button class="btns save__addresses"><img src="assets/img/briefcase-BY4GfCaC.png" alt=""> Work</button>
+                                <button class="btns save__addresses"><img src="assets/img/location-BBKCEJe0.png" alt=""> Other</button>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="btns form__btn" data-bs-toggle="modal" data-bs-dismiss="modal">Save Address</button>
+                        </div>
+                      </div>
+                    </div>
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                   </div>
                   <div class="address__card address__card__place">
                     <div class="left__address">

@@ -123,6 +123,28 @@
   .header__wrap {
     padding: 0.6rem 0px;
 }
+.delivery__address {
+  grid-template-columns: repeat(1,1fr);
+}
+
+.checkout__left__card__text {
+  width: 100%;
+}
+
+.meal__selection {
+  flex-wrap: wrap;
+}
+
+.d-flex.align-items-start {
+  flex-direction: column;
+}
+
+div#v-pills-tab {
+  width: 100%;
+  border: none;
+  flex-direction: row !IMPORTANT;
+  margin-bottom: 25px;
+}
 }
 
 @media (min-width: 320px) and (max-width: 575px) {
