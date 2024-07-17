@@ -1,3 +1,20 @@
+let saveAddresses = document.querySelectorAll('.save__addresses')
+saveAddresses.forEach((x) => {
+  x.addEventListener('click', () => {
+    if(x.classList.add('saveBtn')){
+      x.classList.remove('saveBtn')
+    }else {
+      x.classList.add('saveBtn')
+    }
+
+    saveAddresses.forEach((e) => {
+      if (e !== x) {
+        e.classList.remove("saveBtn");
+      }
+    });
+  })
+});
+
 let checkCard = document.querySelectorAll('.subscription__single__card');
 let checkInput = document.querySelector('.meal_check');
 // let checkCard = document.querySelectorAll('.meal-check');
@@ -61,22 +78,7 @@ minus.addEventListener('click',() => {
 })
 
 
-let saveAddresses = document.querySelectorAll('.save__addresses')
-saveAddresses.forEach((x) => {
-  x.addEventListener('click', () => {
-    if(x.classList.add('saveBtn')){
-      x.classList.remove('saveBtn')
-    }else {
-      x.classList.add('saveBtn')
-    }
 
-    saveAddresses.forEach((e) => {
-      if (e !== x) {
-        e.classList.remove("saveBtn");
-      }
-    });
-  })
-})
 
 
 $(document).ready(function () {
@@ -109,3 +111,71 @@ function add(x){
 }
 
 
+    const calendar = document.getElementById('calendar');
+const prevWeekBtn = document.getElementById('prevWeek');
+const nextWeekBtn = document.getElementById('nextWeek');
+const slider = document.getElementById('slider');
+const sliderTitle = document.getElementById('slider-title');
+const sliderDate = document.getElementById('slider-date');
+const sliderDescription = document.getElementById('slider-description');
+
+const daysOfWeek = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+
+let currentDate = new Date();
+let startDate = new Date(currentDate);
+
+function generateCalendar(startDate) {
+    const daysHTML = [];
+    for (let i = 0; i < 7; i++) {
+        const date = new Date(startDate);
+        date.setDate(startDate.getDate() + i);
+        const dayName = daysOfWeek[date.getDay()];
+        const dayNumber = date.getDate();
+        const monthName = months[date.getMonth()];
+        const isSelected = (date.toDateString() === new Date().toDateString()) ? 'selected' : '';
+        daysHTML.push(`<div class="day ${isSelected}" data-date="${date}">${dayName} <br> ${dayNumber} <br> ${monthName}</div>`);
+    }
+    calendar.innerHTML = daysHTML.join('');
+    updateButtonState();
+    addDayClickEvent();
+}
+
+function updateButtonState() {
+    prevWeekBtn.disabled = startDate <= new Date();
+}
+
+function addDayClickEvent() {
+    const dayElements = calendar.getElementsByClassName('day');
+    for (let dayElement of dayElements) {
+        dayElement.addEventListener('click', function() {
+            clearSelectedState();
+            dayElement.classList.add('clicked');
+            slider.style.display = 'flex';
+            const selectedDate = new Date(dayElement.dataset.date);
+            sliderTitle.innerText = "Selected Date";
+            sliderDate.innerText = `${daysOfWeek[selectedDate.getDay()]} ${selectedDate.getDate()} ${months[selectedDate.getMonth()]}`;
+            sliderDescription.innerText = "You have selected this date.";
+        });
+    }
+}
+
+function clearSelectedState() {
+    const dayElements = calendar.getElementsByClassName('day');
+    for (let dayElement of dayElements) {
+        dayElement.classList.remove('clicked');
+        dayElement.classList.remove('selected');
+    }
+}
+
+prevWeekBtn.addEventListener('click', () => {
+    startDate.setDate(startDate.getDate() - 7);
+    generateCalendar(startDate);
+});
+
+nextWeekBtn.addEventListener('click', () => {
+    startDate.setDate(startDate.getDate() + 7);
+    generateCalendar(startDate);
+});
+
+generateCalendar(startDate);

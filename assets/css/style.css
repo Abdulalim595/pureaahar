@@ -33,9 +33,13 @@
 }
 
 body {
+  padding: 0px !important;
+  margin: 0px !important;
 font-family: "Poppins", sans-serif;
 }
-
+.modal-backdrop.show {
+  z-index: 9;
+}
 ul,ol {
   padding: 0;
   margin: 0;
@@ -232,7 +236,137 @@ header.header__area {
 .nav__login ul li a:hover {
   color: var(--textHover);
 }
+.welcomeh5 {
+  color: rgb(3, 179, 52);
+  font-family: Poppins;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  margin-left: 35px;
+}
 
+.modal-header1 button {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+}
+
+.login__number > span {
+  display: block;
+  margin: 15px 0px 15px;
+}
+
+.flag,.number__input {
+  border: 1px solid rgb(209, 213, 219);
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 6px;
+  padding: 8px 14px;
+}
+
+.flag img {
+  width: 1.75rem;
+}
+
+.flag svg {
+  width: 22px;
+  opacity: .2;
+}
+
+.phone__number {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.number__input {
+  width: 100%;
+  justify-content: start;
+}
+
+.login__number {
+  padding: 10px 20px;
+}
+
+.number__input input {
+  font-weight: bold;
+}
+
+.number__input span {
+  padding-right: 8px;
+  margin-right: 8px;
+  border-right: 1px solid #c7c7c7;
+  border-radius: 0px;
+}
+
+.login__number button {
+  margin-top: 32px;
+  width: 100%;
+  background: #E0E0E0;
+  border: none;
+  color: #57575780;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.verification__title {
+  text-align: center;
+}
+
+.verification__title h5 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.verification__title span {
+  font-size: 13px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.verification__input {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  gap: 8px;
+  margin: 30px 0px;
+}
+
+.verification__input input {
+  font: inherit;
+  letter-spacing: inherit;
+  color: currentcolor;
+  border: 0px;
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+  padding: 16.5px 14px;
+}
+
+.resend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.resend p {
+  font-size: 13px;
+}
+
+.resend p a {
+  color: var(--bgOrange);
+  text-decoration: underline;
+}
+
+.resend > a {
+  color: var(--bgOrange);
+  text-decoration: underline;
+}
 /*===================== header CSS AREA END =====================*/
 
 /*===================== hero CSS AREA start =====================*/
@@ -1413,8 +1547,10 @@ div#v-pills-tab {
 
 
 
-
-.modal-dialog.modal-dialog-centered {
+.modal {
+  z-index: 99999;
+}
+.modal__area {
   max-height: calc(100% - 64px);
   max-width: 600px;
   width: calc(100% - 64px);
@@ -1494,7 +1630,10 @@ div#v-pills-tab {
   padding-bottom: 10px;
   font-weight: 500;
 }
-
+.your__details > span {
+  display: block;
+  margin-bottom: 8px;
+}
 .input__field {
     display: flex;
     flex-direction: column;
@@ -1503,7 +1642,7 @@ div#v-pills-tab {
     margin-bottom: 1rem;
 }
 
-.input__field input {border: 1px solid #e5e7eb;padding: .75rem;}
+.input__field > input {border: 1px solid #e5e7eb;padding: .75rem;width: 100%;}
 .saveBtn {
   background-color: rgb(232, 247, 247) !important;
     border: 1px solid rgb(29, 170, 170) !important;
@@ -1528,6 +1667,59 @@ div#v-pills-tab {
 .mark input {
     width: 20px;
     height: 20px;
+}
+
+.your__details form {
+  background-color: rgb(244, 244, 244);
+  padding: 10px;
+  max-width: 640px;
+  border-radius: 4px;
+}
+
+.besic__info,.add__info {
+  background: #fff;
+  padding: 10px 15px;
+}
+
+.add__info > .input__field {
+  font-size: 16px !important;
+}
+
+.add-mail {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e5e7eb;
+  padding: .75rem;
+  font-size: 12px;
+}
+
+.add-mail input {
+  border: none;
+  padding: 0px;
+}
+
+.add-mail button {
+  background: transparent;
+  color: var(--bgOrange);
+}
+.add__info > button {
+  width: 100%;
+  background: #02aa14;
+  color: #fff;
+  font-weight: 500;
+  padding: 12px;
+  border-radius: 5px;
+}
+.gender-select {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.gender-select {
+  margin: 15px 0px 25px;
+}
+.gender-select, .hero__single__form__select select {
+  border: none;
 }
 /*===================== Meals CSS AREA END =====================*/
 
@@ -1621,3 +1813,107 @@ ul.footer__social li a {
 
 
 /* calender  */
+.calendar-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.calendar-container button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 10px;
+  width: 40px;
+  height: 40px;
+  line-height: 15px;
+}
+
+.calendar-container button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.calendar {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.day {
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.day.selected, .day.clicked {
+  background-color: #ff6b6b;
+  color: white;
+  border-radius: 10px;
+}
+
+.slider {
+  display: none;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 48%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.slider-item i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('icons.png') no-repeat;
+  margin-right: 5px;
+}
+
+.home-icon {
+  background-position: 0 0;
+}
+
+.work-icon {
+  background-position: -20px 0;
+}
+
+@media (max-width: 600px) {
+  .calendar-container {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 10px;
+  }
+
+  .calendar-container button {
+      margin: 10px 0;
+      padding: 10px 20px;
+  }
+
+  .slider {
+      flex-direction: column;
+  }
+
+  .slider-item {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+}

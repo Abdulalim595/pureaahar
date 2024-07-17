@@ -46,7 +46,73 @@
                     <li><a href="meals-page.html">Meals</a></li>
                     <li><a href="profile.html" class="active">Profile</a></li>
                 </ul>
-                <a href="#"><i class="fa-regular fa-user"></i>LOGIN/SIGNUP</a>
+
+                <a class="" data-bs-toggle="modal" href="#exampleModalToggle1" role="button"><i class="fa-regular fa-user"></i>LOGIN/SIGNUP</a>
+                
+                <div class="modal fade" id="exampleModalToggle1" aria-hidden="true" aria-labelledby="exampleModalToggleLabel1" tabindex="-1">
+                  <div class="modal-dialog modal-dialog-centered modal__login">
+                    <div class="modal-content modal-content1">
+                      <div class="modal-header modal-header1">
+                        <h5 class="modal-title welcomeh5" id="exampleModalToggleLabel1"> Welcome to PureAahar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="login__number">
+                          <h4>Verify your phone number with code</h4>
+                          <span style="font-size: 12px;">We’ll send you a code. It helps keep your account
+                            secure</span>
+                          <div class="flag__nmbr">
+                            <span style="font-size: 12px;">Your Phone Number</span>
+                            <div class="phone__number">
+                              <div class="flag">
+                                <img src="assets/img/india-Dywmhe4R.png" alt="">
+                                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-18rhxbz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowDropDownIcon"><path d="m7 10 5 5 5-5z"></path></svg>
+                              </div>
+                              <div class="number__input">
+                                <span><b>+91</b></span>
+                                <input type="text">
+                              </div>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle22" data-bs-toggle="modal" data-bs-dismiss="modal">COUNTINUE</button> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal fade" id="exampleModalToggle22" aria-hidden="true" aria-labelledby="exampleModalToggleLabel22" tabindex="-1">
+                  <div class="modal-dialog modal-dialog-centered modal__login">
+                    <div class="modal-content modal-content1">
+                      <div class="modal-header modal-header1">
+                        <h5 class="modal-title welcomeh5" id="exampleModalToggleLabel22">Welcome to PureAahar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="login__number">
+                          <div class="verification__title">
+                            <h5>Mobile Verification</h5>
+                            <span>Enter the 6 digit code sent to +91 1234567890</span>
+                          </div>
+                          <div class="verification__input">
+                            <input type="text" placeholder="-">
+                            <input type="text" placeholder="-">
+                            <input type="text" placeholder="-">
+                            <input type="text" placeholder="-">
+                            <input type="text" placeholder="-">
+                            <input type="text" placeholder="-">
+                          </div>
+                          <div class="resend">
+                            <p>Didn't receive code? <a href="#">Resend</a></p>
+                            <span>or</span>
+                            <a href="#">Login with Password</a>
+                          </div>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle1" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
             </div>
         </div>
     </div>
@@ -62,7 +128,7 @@
           <div class="d-flex align-items-start">
             <div class="nav flex-column nav-pills me-3 tab__btn" id="v-pills-tab" role="tablist" aria-orientation="vertical">
               <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"><img src="assets/img/user-profile.png" alt=""> View Orders</button>
-              <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false"><img src="assets/img/user-profile.png" alt="">Refer & Earn</button>
+              <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false"><img src="assets/img/user-profile.png" alt="">Personal Details</button>
               <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false"><img src="assets/img/user-profile.png" alt="">Manage Address</button>
             </div>
             <div class="tab-content" id="v-pills-tabContent">
@@ -113,7 +179,50 @@
                 </div>
               </div>
               <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                <div class="refer">
+                <div class="your__details">
+                  <h5>Add Your Details</h5>
+                  <span style="font-weight: 500;font-size: 12px;">Edit your personal details</span>
+                  <form action="">
+                    <div class="besic__info">
+                      <h6 style="display: flex; gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info "><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg> Basic Information</h6>
+                    </div>
+                    <div class="add__info">
+                      <div class="input__field">
+                        <label for="">Full name</label>
+                        <input type="text" placeholder="Rup">
+                      </div>
+                      <div class="input__field">
+                        <label for="">Birthdate</label>
+                        <input type="datetime" placeholder="Rup">
+                      </div>
+                      <div class="input__field">
+                        <label for="">Email (Optional)</label>
+                        <div class="add-mail">
+                          <input value="rupak.manna99@gmail.com">
+                          <button>Change</button>
+                        </div>
+                        <div class="gender-select">
+                          <label for="">Gender:</label>
+                          <div class="hero__single__form__select">
+                              <select name="" id="">
+                                  <option value="">Male</option>
+                                  <option value="">Female</option>
+                                  <option value="">Others</option>
+                              </select>
+                          </div>
+                        </div>
+                        <div class="detail_check">
+                          <label for="">Receive WhatsApp update?</label>
+                          <input type="checkbox">
+                        </div>
+                      </div>
+                      <button class="btns">UPDATE</button>
+                    </div>
+                  </form>
+                </div>
+
+
+                <!-- <div class="refer">
                   <h5>How to refer a friend</h5>
                   <div class="refer__content">
                     <h6>We value friendship</h6>
@@ -154,7 +263,7 @@
                       <button><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-9klts8" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="WhatsAppIcon"><path d="M16.75 13.96c.25.13.41.2.46.3.06.11.04.61-.21 1.18-.2.56-1.24 1.1-1.7 1.12-.46.02-.47.36-2.96-.73-2.49-1.09-3.99-3.75-4.11-3.92-.12-.17-.96-1.38-.92-2.61.05-1.22.69-1.8.95-2.04.24-.26.51-.29.68-.26h.47c.15 0 .36-.06.55.45l.69 1.87c.06.13.1.28.01.44l-.27.41-.39.42c-.12.12-.26.25-.12.5.12.26.62 1.09 1.32 1.78.91.88 1.71 1.17 1.95 1.3.24.14.39.12.54-.04l.81-.94c.19-.25.35-.19.58-.11l1.67.88M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10c-1.97 0-3.8-.57-5.35-1.55L2 22l1.55-4.65A9.969 9.969 0 0 1 2 12 10 10 0 0 1 12 2m0 2a8 8 0 0 0-8 8c0 1.72.54 3.31 1.46 4.61L4.5 19.5l2.89-.96A7.95 7.95 0 0 0 12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8z"></path></svg>SHARE</button>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
               <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                 <div class="checkout__left__card checkout__left__card2">
@@ -170,7 +279,7 @@
 
 
                       <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                        <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-dialog modal-dialog-centered modal__area">
                           <div class="modal-content">
                             <div class="modal-header">
                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

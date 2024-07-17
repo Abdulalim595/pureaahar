@@ -80,7 +80,11 @@
               </div>
             </div>
           </div>
-          
+          <div class="calendar-container">
+            <button id="prevWeek">&lt;</button>
+            <div class="calendar" id="calendar"></div>
+            <button id="nextWeek">&gt;</button>
+        </div>
           <div class="row g-4">
             <div class="col-sm-6">
               <div class="meal__left__items">
@@ -322,7 +326,7 @@
   <script src="assets/js/aos.js"></script>
   <script src="assets/js/jquery.nice-select.min.js"></script>
   <script src="assets/js/app.js"></script>
-
+  
   <script>
     const daysTag = document.querySelector(".days");
 const currentDate = document.querySelector(".current-date");
