@@ -111,7 +111,7 @@ function add(x){
 }
 
 
-    const calendar = document.getElementById('calendar');
+const calendaredd = document.getElementById('calendaredd');
 const prevWeekBtn = document.getElementById('prevWeek');
 const nextWeekBtn = document.getElementById('nextWeek');
 const slider = document.getElementById('slider');
@@ -119,34 +119,34 @@ const sliderTitle = document.getElementById('slider-title');
 const sliderDate = document.getElementById('slider-date');
 const sliderDescription = document.getElementById('slider-description');
 
-const daysOfWeek = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
-const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+const daysOfWeeks = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+const monthss = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
 
-let currentDate = new Date();
-let startDate = new Date(currentDate);
+let currentDatesss = new Date();
+let startDates = new Date(currentDatesss);
 
-function generateCalendar(startDate) {
+function generateCalendar(startDates) {
     const daysHTML = [];
     for (let i = 0; i < 7; i++) {
-        const date = new Date(startDate);
-        date.setDate(startDate.getDate() + i);
-        const dayName = daysOfWeek[date.getDay()];
-        const dayNumber = date.getDate();
-        const monthName = months[date.getMonth()];
+        const date = new Date(startDates);
+        date.setDate(startDates.getDate() + i);
+        const dayNames = daysOfWeeks[date.getDay()];
+        const dayNumbers = date.getDate();
+        const monthNames = monthss[date.getMonth()];
         const isSelected = (date.toDateString() === new Date().toDateString()) ? 'selected' : '';
-        daysHTML.push(`<div class="day ${isSelected}" data-date="${date}">${dayName} <br> ${dayNumber} <br> ${monthName}</div>`);
+        daysHTML.push(`<div class="day ${isSelected}" data-date="${date}">${dayNames} <br> ${dayNumbers} <br> ${monthNames}</div>`);
     }
-    calendar.innerHTML = daysHTML.join('');
+    calendaredd.innerHTML = daysHTML.join('');
     updateButtonState();
     addDayClickEvent();
 }
 
 function updateButtonState() {
-    prevWeekBtn.disabled = startDate <= new Date();
+    prevWeekBtn.disabled = startDates <= new Date();
 }
 
 function addDayClickEvent() {
-    const dayElements = calendar.getElementsByClassName('day');
+    const dayElements = calendaredd.getElementsByClassName('day');
     for (let dayElement of dayElements) {
         dayElement.addEventListener('click', function() {
             clearSelectedState();
@@ -154,14 +154,14 @@ function addDayClickEvent() {
             slider.style.display = 'flex';
             const selectedDate = new Date(dayElement.dataset.date);
             sliderTitle.innerText = "Selected Date";
-            sliderDate.innerText = `${daysOfWeek[selectedDate.getDay()]} ${selectedDate.getDate()} ${months[selectedDate.getMonth()]}`;
+            sliderDate.innerText = `${daysOfWeeks[selectedDate.getDay()]} ${selectedDate.getDate()} ${monthss[selectedDate.getMonth()]}`;
             sliderDescription.innerText = "You have selected this date.";
         });
     }
 }
 
 function clearSelectedState() {
-    const dayElements = calendar.getElementsByClassName('day');
+    const dayElements = calendaredd.getElementsByClassName('day');
     for (let dayElement of dayElements) {
         dayElement.classList.remove('clicked');
         dayElement.classList.remove('selected');
@@ -169,13 +169,13 @@ function clearSelectedState() {
 }
 
 prevWeekBtn.addEventListener('click', () => {
-    startDate.setDate(startDate.getDate() - 7);
-    generateCalendar(startDate);
+    startDates.setDate(startDates.getDate() - 7);
+    generateCalendar(startDates);
 });
 
 nextWeekBtn.addEventListener('click', () => {
-    startDate.setDate(startDate.getDate() + 7);
-    generateCalendar(startDate);
+    startDates.setDate(startDates.getDate() + 7);
+    generateCalendar(startDates);
 });
 
-generateCalendar(startDate);
+generateCalendar(startDates);

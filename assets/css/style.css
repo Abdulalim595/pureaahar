@@ -769,7 +769,7 @@ section.satvik__box {
   font-size: 18px;
   font-weight: 500;
 }
-.calendar {
+.calendars {
   padding: 20px;
   background-color: #fff;
 }
@@ -778,7 +778,7 @@ section.satvik__box {
   margin-top: 1rem;
   padding-bottom: 0px;
 }
-.calendar ul {
+.calendars ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -787,32 +787,32 @@ section.satvik__box {
   list-style: none;
   text-align: center;
 }
-.calendar .days {
+.calendars .dayss {
   margin-bottom: 20px;
 }
-.calendar li {
+.calendars li {
   color: #333;
   width: calc(100% / 7);
   font-size: 1.07rem;
 }
-.calendar .weeks li {
+.calendars .weeks li {
   cursor: default;
   font-size: 0.75rem;
 }
-.calendar .days li {
+.calendars .dayss li {
   z-index: 1;
   cursor: pointer;
   position: relative;
   margin-top: 30px;
   font-size: 0.75rem;
 }
-.days li.inactive {
+.dayss li.inactive {
   color: #aaa;
 }
-.days li.active {
+.dayss li.active {
   color: #fff;
 }
-.days li::before {
+.dayss li::before {
   position: absolute;
   content: "";
   left: 50%;
@@ -825,10 +825,10 @@ section.satvik__box {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.days li.active::before {
+.dayss li.active::before {
   background: rgb(25, 118, 210);
 }
-.days li:not(.active):hover::before {
+.dayss li:not(.active):hover::before {
   background: #f2f2f2;
 }
 
@@ -1813,7 +1813,7 @@ ul.footer__social li a {
 
 
 /* calender  */
-.calendar-container {
+.calendar-containers {
   display: flex;
   align-items: center;
   width: 100%;
@@ -1822,7 +1822,7 @@ ul.footer__social li a {
   box-sizing: border-box;
 }
 
-.calendar-container button {
+.calendar-containers button {
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 50%;
@@ -1834,12 +1834,12 @@ ul.footer__social li a {
   line-height: 15px;
 }
 
-.calendar-container button:disabled {
+.calendar-containers button:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-.calendar {
+.calendaredd {
   display: flex;
   justify-content: space-around;
   width: 100%;
@@ -1892,18 +1892,18 @@ ul.footer__social li a {
 }
 
 @media (max-width: 600px) {
-  .calendar-container {
+  .calendar-containers {
       flex-direction: column;
       align-items: center;
   }
   
-  .calendar {
+  .calendared {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
       gap: 10px;
   }
 
-  .calendar-container button {
+  .calendar-containers button {
       margin: 10px 0;
       padding: 10px 20px;
   }
